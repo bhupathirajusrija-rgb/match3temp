@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# match3temp
 
-## Getting Started
+> A Match-3 puzzle game template built with TypeScript.
 
-First, run the development server:
+## Overview
+
+`match3temp` is a TypeScript-based template for building Match-3 style puzzle games (think Candy Crush or Bejeweled). This project provides the core game logic and structure that can be extended into a full game.
+
+## Features
+
+- Match-3 game board logic
+- Tile swapping and match detection
+- Score tracking
+- Written in TypeScript for type safety and maintainability
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| TypeScript | Game logic & type-safe development |
+| Node.js | Runtime environment |
+
+## Prerequisites
+
+- Node.js 16+
+- npm or yarn
+
+## Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/bhupathirajusrija-rgb/match3temp.git
+cd match3temp
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Compile TypeScript**
+
+```bash
+npx tsc
+```
+
+4. **Run the project**
+
+```bash
+npm start
+```
+
+## Development
+
+For live reloading during development:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+match3temp/
+├── src/
+│   ├── board.ts        # Game board logic
+│   ├── tile.ts         # Tile definitions
+│   ├── matcher.ts      # Match detection algorithm
+│   ├── scorer.ts       # Score tracking
+│   └── index.ts        # Entry point
+├── tsconfig.json       # TypeScript config
+├── package.json        # Dependencies
+└── README.md           # Documentation
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How It Works
 
-## Learn More
+1. **Board Initialization** — A grid is filled with randomly assigned tiles
+2. **Player Move** — Two adjacent tiles are swapped
+3. **Match Detection** — The board checks for 3+ matching tiles in a row/column
+4. **Clearing & Gravity** — Matched tiles are removed and tiles fall to fill gaps
+5. **Scoring** — Points are awarded based on match size and combos
 
-To learn more about Next.js, take a look at the following resources:
+## Roadmap
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] Add animations
+- [ ] Add special tiles (bombs, row-clearers)
+- [ ] Build a UI with HTML Canvas or a framework
+- [ ] Add difficulty levels
+- [ ] Leaderboard support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Srija Bhupathiraju** — [@bhupathirajusrija-rgb](https://github.com/bhupathirajusrija-rgb)
